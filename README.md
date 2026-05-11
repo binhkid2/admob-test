@@ -19,9 +19,15 @@ The project uses Google's official test IDs in `AdMobDemoIDs.swift`, so it is sa
 - `admob_testApp.swift` starts the Mobile Ads SDK.
 - `Info.plist` includes `GADApplicationIdentifier` and SKAdNetwork entries.
 - `ContentView.swift` shows a tab for each ad type.
-- `BannerAdDemoView.swift` renders an adaptive banner.
-- `InterstitialAdDemoView.swift` loads and presents a full-screen interstitial.
-- `NativeAdvancedAdDemoView.swift` loads native ad assets and renders them in a custom UIKit view.
+
+## Reusable Files
+
+- `AdMobBannerView.swift`: `AdMobBannerView(adUnitID: "your-banner-id")`
+- `AdMobInterstitialController.swift`: create with `AdMobInterstitialController(adUnitID: "your-interstitial-id")`
+- `AdMobNativeAdController.swift`: loads native ads with your native ad unit ID
+- `AdMobNativeAdvancedAdView.swift`: renders a loaded native ad
+
+The `*DemoView.swift` files are only examples of how to use those reusable pieces.
 
 ## Verify
 
